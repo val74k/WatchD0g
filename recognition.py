@@ -7,12 +7,12 @@ import telegram
 import time
 
 def telegram_send(name):
-    bot = telegram.Bot(token='<API_KEY>')
+    bot = telegram.Bot(token='<API_KEY>') # To create telegram bot: dm https://t.me/BotFather on Telegram and create a bot
     print(name[:-4])
-    #if name[:-4] != "<YOURNAME>":
-        #bot.send_message(chat_id='<YOUR_CHAT_ID_TELEGRAM>', text=f'{name[:-4]} entered')
+    if name[:-4] != "<YOURNAME>":
+        bot.send_message(chat_id='<YOUR_CHAT_ID_TELEGRAM>', text=f'{name[:-4]} entered') # To get your chat_id, you can dm a bot on telegram like https://t.me/chat_id_echo_bot 
 
-        ##time.sleep(5)
+        #time.sleep(5)
 
 
 
@@ -48,7 +48,7 @@ class FaceRecognition:
         print(self.known_face_names)
 
     def run_recognition(self):
-        video_capture = cv2.VideoCapture(0)
+        video_capture = cv2.VideoCapture(0) # change to 1 or 2 if you have several webcams
 
         if not video_capture.isOpened():
             sys.exit('Video source not found...')
@@ -93,7 +93,7 @@ class FaceRecognition:
                 cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
                 cv2.putText(frame, name, (left + 6, bottom - 6), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 255, 255), 1)
 
-            cv2.imshow('W@tchD0g', frame)
+            cv2.imshow('facial recognition', frame)
 
             if cv2.waitKey(1) == ord('q'):
                 break
