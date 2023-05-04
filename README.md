@@ -1,4 +1,4 @@
-# Python facial recognition
+# Python facial recognition + sending on telegram
 facial recognition (webcam) + sending on telegram in private message with python.
 
 the program allows you to receive a notification on your phone with the name of the detected person.
