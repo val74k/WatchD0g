@@ -9,7 +9,7 @@ import time
 def telegram_send(name):
     bot = telegram.Bot(token='<API_KEY>') # To create telegram bot: dm https://t.me/BotFather on Telegram and create a bot
     print(name[:-4])
-    if name[:-4] != "<YOURNAME>":
+    if name[:-4] != "<YOURNAME>": # to not receive notifications when self is detected
         bot.send_message(chat_id='<YOUR_CHAT_ID_TELEGRAM>', text=f'{name[:-4]} entered') # To get your chat_id, you can dm a bot on telegram like https://t.me/chat_id_echo_bot 
 
         #time.sleep(5)
