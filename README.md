@@ -3,6 +3,8 @@ facial recognition (webcam) + sending on telegram in private message with python
 
 ```pip install -r requirements.txt```
 
+and run main.py
+
 To create telegram bot:
 dm https://t.me/BotFather on Telegram and create a bot, copy the API_KEY and paste it in line 10
 
