@@ -1,5 +1,8 @@
 # WatchD0g
-facial recognition (webcam) + sending on telegram in private message with python
+facial recognition (webcam) + sending on telegram in private message with python.
+
+the program allows you to receive a notification on your phone with the name of the detected person.
+
 
 ```pip install -r requirements.txt```
 
